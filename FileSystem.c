@@ -44,7 +44,7 @@ void unmap(){
 		exit(0);
     }
 
-	if (munmap(dirTable, DIR_TABLE_SIZE * sizeof(struct Entry)) == -1) {
+    if (munmap(dirTable, DIR_TABLE_SIZE * sizeof(struct Entry)) == -1) {
         close(fd);
         printf("Error unmap: %s\n", strerror(errno)); //error handling
 		exit(0);
